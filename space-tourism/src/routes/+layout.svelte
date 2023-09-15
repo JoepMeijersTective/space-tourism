@@ -1,5 +1,5 @@
 <script>
-    // import '$lib/styles/style.scss';
+    import '$lib/styles/style.scss';
     import logo from '$lib/assets/shared/logo.svg'
 </script>
 
