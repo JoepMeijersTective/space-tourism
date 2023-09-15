@@ -89,7 +89,15 @@
         <h2 class="numbered-title"><span>03 </span>Interactive elements</h2>
         
         <!-- navigation -->
-        <div></div>
+        <div>
+            <nav>
+                <ul class="primary-navigation underline-indicators flex">
+                    <li class="active"><a class="ff-sans-cond text-white uppercase letter-spacing-2" href="#"><span>00</span>Active</a></li>
+                    <li><a class="ff-sans-cond text-white uppercase letter-spacing-2" href="#"><span>01</span>Hovered</a></li>
+                    <li><a class="ff-sans-cond text-white uppercase letter-spacing-2" href="#"><span>02</span>Idle</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <div class="flex">
             <div style="margin-top: 5rem;">
@@ -97,12 +105,27 @@
                 <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
             </div>
 
-            <div>
+            <div class="flow" style="--flow-space: 5rem">
                 <!-- Tabs -->
+                <div class="tab-list underline-indicators flex">
+                    <button aria-selected="true" class="ff-sans-cond uppercase fs-300 text-light bg-dark letter-spacing-2">Moon</button>
+                    <button aria-selected="false" class="ff-sans-cond uppercase fs-300 text-light bg-dark letter-spacing-2">Mars</button>
+                    <button aria-selected="false" class="ff-sans-cond uppercase fs-300 text-light bg-dark letter-spacing-2">Europa</button>
+                </div>
             
                 <!-- Dots -->
+                <div class="dot-indicators flex">
+                    <button aria-selected="true"><span class="sr-only">tab title</span></button>
+                    <button aria-selected="false"><span class="sr-only">tab title</span></button>
+                    <button aria-selected="false"><span class="sr-only">tab title</span></button>
+                </div>
 
                 <!-- Numbers -->
+                <div class="numbered-indicators flex">
+                    <button aria-selected="true" class="ff-serif fs-500 text-white">1</button>
+                    <button aria-selected="false" class="ff-serif fs-500 text-white">2</button>
+                    <button aria-selected="false" class="ff-serif fs-500 text-white">3</button>
+                </div>
             </div>
         </div>
     </section>
