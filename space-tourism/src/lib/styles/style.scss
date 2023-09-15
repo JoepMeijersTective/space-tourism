@@ -132,8 +132,16 @@ select {
 
 .grid-container {
     display: grid;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1rem;
+
+    * {
+        max-width: 50ch;
+    }
 
     @media (min-width: 45rem) {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
 
@@ -142,6 +150,12 @@ select {
         }
         & > *:last-child {
             grid-column: 3;
+        }
+
+        // Specific cases
+        &.grid-container--home {
+            padding-bottom: max(6rem, 25vh);
+            align-items: end;
         }
     }
 }
@@ -209,6 +223,7 @@ select {
 
 // ---------------------- Components ---------------------
 .large-button {
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
@@ -325,4 +340,10 @@ select {
             color: hsl(var(--clr-dark));
         }
     }
+}
+
+// ------------------- Page Specific -----------------
+// Home
+.home {
+    background-image: url($lib/assets/home/background-home-mobile.jpg);
 }
